@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfTask11.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTask11"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="800">
+    <StackPanel>
+        <Path Fill="Red" Stroke="Black">
+            <Path.Data>
+                <GeometryGroup >
+                    <EllipseGeometry  RadiusX="75" RadiusY="75" Center="400,200"/>
+                    <EllipseGeometry  RadiusX="60" RadiusY="60" Center="400,200"/>
+                    <RectangleGeometry x:Name="rect" Rect="392.5,140,12,85" RadiusX="900" RadiusY="0.9"  >
+                        <RectangleGeometry.Transform>
+                            <TransformGroup>
+                                <SkewTransform CenterX="378.9" CenterY="186" AngleX="-45" AngleY="45"/>
+                            </TransformGroup>
+                        </RectangleGeometry.Transform>
+                    </RectangleGeometry>
+                </GeometryGroup>
+
+
+
+            </Path.Data>
+        </Path>
+    </StackPanel>
+</Window>
