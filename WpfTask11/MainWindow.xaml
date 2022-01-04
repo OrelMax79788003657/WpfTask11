@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="400" Width="800">
     <StackPanel>
-        <Path Fill="Red" Stroke="Black">
+        <!--<Path Fill="Red" Stroke="Black">
             <Path.Data>
                 <GeometryGroup >
                     <EllipseGeometry  RadiusX="75" RadiusY="75" Center="400,200"/>
@@ -20,9 +20,33 @@
                         </RectangleGeometry.Transform>
                     </RectangleGeometry>
                 </GeometryGroup>
-
-
-
+            </Path.Data>
+        </Path>-->
+        <Path Fill="Red" Stroke="Black">
+            <Path.Data>
+                <GeometryGroup>
+                    <CombinedGeometry GeometryCombineMode="Union">
+                        <CombinedGeometry.Transform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform CenterX="0" CenterY="0" Angle="45"/>
+                                <TranslateTransform X="100" Y="100"/>
+                            </TransformGroup>
+                        </CombinedGeometry.Transform>
+                        
+                        <CombinedGeometry.Geometry1>
+                            <RectangleGeometry x:Name="rect" Rect="-7.5,-67.5,15,140"/>
+                        </CombinedGeometry.Geometry1>
+                        
+                        <CombinedGeometry.Geometry2>
+                            <GeometryGroup FillRule="EvenOdd">
+                                <EllipseGeometry  RadiusX="75" RadiusY="75" Center="0,0"/>
+                                <EllipseGeometry  RadiusX="60" RadiusY="60" Center="0,0"/>
+                            </GeometryGroup>
+                        </CombinedGeometry.Geometry2>
+                    </CombinedGeometry>
+                </GeometryGroup>
             </Path.Data>
         </Path>
     </StackPanel>
